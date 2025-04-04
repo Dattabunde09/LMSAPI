@@ -17,6 +17,8 @@ engine = create_engine(SQLALCHEMY_DATABASE_URL)
 sessionLocal = sessionmaker(autocommit = False, autoflush=False, bind=engine)
 
 def init_db():
+    from Admin.models import Admin
+    from Books.models import Books
     Base.metadata.create_all(bind=engine)
     
 def get_db():
