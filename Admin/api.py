@@ -1,9 +1,9 @@
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.orm import Session
-from utils.database import sessionLocal, get_db
 from Admin.models import Admin
 from Admin.schemas import UserSignup, Login, ResetPassword, UpdateAdmin
 from Admin.services import AdminService
+from utils.database import get_db
 
 router = APIRouter()
 
