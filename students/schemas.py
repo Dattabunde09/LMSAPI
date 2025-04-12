@@ -5,4 +5,4 @@ class AddStudent(BaseModel):
     email:str
     phone:str
     book_id: int
-    admin_id: int
+    admin_id: str
