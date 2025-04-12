@@ -10,4 +10,4 @@ class Student(Base):
     phone=Column(String(100),nullable=False)
     email=Column(String(100),nullable=False)
     book_id = Column(Integer)
-    admin_id = Column(Integer)
+    admin_id = Column(String(100),nullable=False)
