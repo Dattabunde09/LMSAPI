@@ -61,6 +61,7 @@
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from students.api import router as  StudentsAPI
 from utils.database import init_db
 from Admin.api import router as AdminAPI
 from Books.api import router as BooksAPI
@@ -91,7 +92,7 @@ app.add_middleware(
 # Include routers
 app.include_router(AdminAPI)
 app.include_router(BooksAPI)
-
+app.include_router(StudentsAPI)
 # Define port from .env or use default
 PORT = int(os.getenv("PORT", 14565))
 
